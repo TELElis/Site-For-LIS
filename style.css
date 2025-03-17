@@ -1,57 +1,118 @@
-body {
-    font-family: Arial, sans-serif;
+/* Сброс стилей для базовых элементов */
+* {
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, #003366, #6699cc);
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #3a8dff, #ffffff);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
     color: #333;
+    line-height: 1.6;
 }
+
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
 }
+
+/* Заголовок и навигация */
 header {
-    background: linear-gradient(135deg, #004080, #66a3ff);
-    color: white;
+    background: #003366;
     padding: 20px 0;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
     text-align: center;
 }
+
 nav ul {
-    list-style: none;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
+
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Секции */
 .section {
     padding: 50px 0;
     text-align: center;
-    background: linear-gradient(135deg, #cce6ff, #e6f2ff);
 }
+
+#about {
+    background: #e6f1ff;
+}
+
 #contact {
-    background: linear-gradient(135deg, #b3d9ff, #99c2ff);
+    background: #cce0ff;
 }
-.social-links {
-    margin-top: 20px;
+
+h2 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 20px;
 }
+
+p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
 .social-links a {
     display: inline-block;
-    margin: 10px;
-    padding: 10px 15px;
-    background: #004080;
-    color: white;
+    margin: 10px 20px;
+    font-size: 1.2rem;
+    color: #003366;
     text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
+    background: #ffffff;
+    transition: background 0.3s, color 0.3s;
 }
+
+.social-links a:hover {
+    background: #003366;
+    color: white;
+}
+
+/* Подвал */
 footer {
-    background: #00264d;
+    background: #003366;
     color: white;
     text-align: center;
     padding: 20px 0;
+    font-size: 1rem;
+}
+
+/* Анимация для фона */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
